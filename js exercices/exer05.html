@@ -1,0 +1,18 @@
+<script>
+let nbs = [1,4];
+
+function firstLast(arr){
+  if(arr.lenght === 0){
+    return {first: null, last: null};
+  }
+
+  return {
+    first: arr[0],
+    last: arr[arr.length - 1]
+  };
+}
+
+console.log(firstLast(nbs));
+
+</script>
+ 

@@ -1,0 +1,38 @@
+<script>
+
+let nbs = [1, 4, 5, 2, 3];
+
+function minMax(nbs){
+  let min = nbs[0];
+  let max = nbs[0];
+  
+  for(let i=0; i<nbs.length; i++){
+    if(nbs[i] < min){
+      min = nbs[i];
+    }
+
+    if(nbs[i] > max){
+      max = nbs[i];
+    }
+
+  }
+  const obj = {min, max}
+
+  return obj;
+}
+
+//const result = minMax(nbs);
+
+///with reduce
+const result = nbs.reduce((acc, current) => {
+    if(current < acc.min){
+      acc.min = current;
+    }
+    if(current > acc.max){
+      acc.max = current
+    }
+    return acc;
+    
+}   , {min: nbs[0], max: nbs[0]})
+</script>
+ 

@@ -1,0 +1,20 @@
+<script>
+
+function sumArr(nombres){
+  let sum = 0;
+  for(let i = 0; i<nombres.length; i++){
+    sum += nombres[i];
+  }
+  return sum;
+}
+
+
+let nbs = [1, 4, 5, 2, 3];
+
+//const result = sumArr(nbs);
+
+const result = nbs.reduce((sum, current) => sum + current, 0);
+
+console.log(result);
+</script>
+ 
